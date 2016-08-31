@@ -1,5 +1,5 @@
 function checkForValidUrl(tabId, changeInfo, tab) {
-    if (tab.url.indexOf("g") > -1) {
+    if (tab.url.indexOf("http://localhost:8080/") > -1) {
         chrome.pageAction.show(tabId);
     }
 }
@@ -7,5 +7,5 @@ function checkForValidUrl(tabId, changeInfo, tab) {
 chrome.tabs.onUpdated.addListener(checkForValidUrl);
 
 chrome.pageAction.onClicked.addListener(function(tab) {
-    chrome.tabs.executeScript(tab.id, {code: "document.getElementById('lst-ib').value = 'Hello World!';"});
+    chrome.tabs.executeScript(tab.id, {code: "document.getElementById('cpf').value = '305.809.118-45';"});
 });
