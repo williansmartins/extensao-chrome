@@ -7,5 +7,13 @@ function checkForValidUrl(tabId, changeInfo, tab) {
 chrome.tabs.onUpdated.addListener(checkForValidUrl);
 
 chrome.pageAction.onClicked.addListener(function(tab) {
-    chrome.tabs.executeScript(tab.id, {code: "document.getElementById('cpf').value = '305.809.118-45';"});
+    chrome.tabs.executeScript(tab.id, {
+    	code: 
+    	"(document.evaluate(\"//label[contains(text(),'5')]\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue).click();" + 
+    	"(document.evaluate(\"//label[contains(text(),'5')]\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue).click();" + 
+    	"(document.evaluate(\"//label[contains(text(),'5')]\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue).click();" + 
+    	"(document.evaluate(\"//label[contains(text(),'5')]\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue).click();" + 
+    	"(document.evaluate(\"//label[contains(text(),'5')]\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue).click();" + 
+    	"(document.evaluate(\"//label[contains(text(),'5')]\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue).click();"
+    });
 });
